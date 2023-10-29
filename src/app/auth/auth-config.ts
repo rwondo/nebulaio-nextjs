@@ -16,8 +16,5 @@ export const authConfig: NextAuthOptions = {
       return session;
     },
   },
-  session: {
-    strategy: "database",
-  },
   secret: process.env.NEXTAUTH_SECRET
 };
