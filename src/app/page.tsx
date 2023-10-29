@@ -15,7 +15,7 @@ import {
 export default function Home() {
   return (
     <>
-      <MaxWidthWrapper className='mb-12 mt-28 sm:mt-20 flex flex-col items-center justify-center text-center'>
+      <MaxWidthWrapper className='mb-12 mt-20 sm:mt-20 flex flex-col items-center justify-center text-center'>
         <div className='mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50'>
           <p className='text-sm font-semibold text-gray-700'>
             Beta <span className='text-blue-600 font-bold'>v1.0</span> is out!
@@ -187,7 +187,7 @@ export default function Home() {
           </li>
         </ol>
       </div>
-      <div className='mx-auto mb-24 mt-28 max-w-5xl sm:mt-32 pl-4'>
+      <div className='mx-auto mb-24 mt-28 max-w-5xl sm:mt-32 pl-4 pr-4'>
         <div className='mb-12 px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl sm:text-center'>
             <h2 className='mt-2 font-bold text-4xl text-gray-900 sm:text-5xl'>
@@ -226,7 +226,7 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-5">
-                <AccordionTrigger>What social media platforms does NebulaIO feature?</AccordionTrigger>
+                <AccordionTrigger>What social media platforms do you support?</AccordionTrigger>
                 <AccordionContent>
                   The beta version will be mainly focused on TikTok, but we have plans to add new platform to ou
                 </AccordionContent>

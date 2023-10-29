@@ -1,0 +1,22 @@
+import { NextAuthOptions, Session } from "next-auth";
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
+
+import { WhopProvider } from "./whop-provider";
+
+export const authConfig: NextAuthOptions = {
+  providers: [
+    WhopProvider({
+      clientId: process.env.WHOP_ID!,
+      clientSecret: process.env.WHOP_SECRET!,
+    }),
+  ],
+  callbacks: {
+    session({ session, user }) {
+      session.user.id = user.id as string;
+      return session;
+    },
+  },
+  session: {
+    strategy: "database",
+  },
+};
