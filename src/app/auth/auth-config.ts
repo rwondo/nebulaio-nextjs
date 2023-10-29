@@ -1,5 +1,5 @@
 import { NextAuthOptions, Session } from "next-auth";
-import { DrizzleAdapter } from "@auth/drizzle-adapter";
+
 
 import { WhopProvider } from "./whop-provider";
 
