@@ -20,18 +20,18 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const session = await getServerSession();
+
   return (
     <html lang="en" className='light'>
       <link rel="icon" href="/nebula-IO-logo-2.ico" sizes="any" />
       <body className={cn(
         'min-h-screen font-sans antialiased grainy scrollbar-hide',
         inter.className
-      )}><SessionProvider session={session}>
-        <NavBar />
-        {children}
-        <Footer />
-        </SessionProvider>
+      )}>
+          <NavBar />
+          {children}
+          <Footer />
+
       </body>
     </html>
   )
