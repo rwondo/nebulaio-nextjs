@@ -1,11 +1,12 @@
-"use client"
-import { redirect } from "next/navigation"
+import { redirect } from "next/navigation";
+import { getServerSession } from "next-auth";
 
-const page = () => {
-
-    return(<div className="">
-
-    </div>)
+export default async function ProtectedRoute() {
+    const session = await getServerSession();
+    if (!session || !session.user) {
+        redirect("/login")
+    }
+    return (
+        <div> logged in </div>
+    )
 }
-
-export default page
