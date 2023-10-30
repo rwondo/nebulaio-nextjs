@@ -7,6 +7,6 @@ export default async function ProtectedRoute() {
         redirect("/login")
     }
     return (
-        <div> logged in </div>
+        <div> logged in {session.user.id} </div>
     )
 }

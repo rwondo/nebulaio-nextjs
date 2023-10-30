@@ -33,7 +33,7 @@ type Profile = {
           id: profile.id,
           name: profile.username,
           email: profile.email,
-          image: profile.profile_pic_url,
+          imagePicture: profile.profile_pic_url,
         };
       },
     };
