@@ -8,7 +8,7 @@ function Footer() {
 	return (
 		<>
     <MaxWidthWrapper>
-			<div className="bg-gray-50 h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
+			<div className="h-1/2 w-full flex md:flex-row flex-col justify-around items-start ">
 
 				<div className="py-5 ">
         <Separator />
