@@ -21,7 +21,7 @@ const NavBar = () => {
                                 variant: "ghost",
                                 size: "sm"
                             })}> Pricing</Link>
-                            <Link href='/login' className={buttonVariants({
+                            <Link href='/dashboard' className={buttonVariants({
 
                                 size: "sm"
                             })}> Dashboard</Link>
