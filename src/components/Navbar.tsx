@@ -3,6 +3,9 @@ import MaxWidthWrapper from "./MaxWidthWrapper"
 import { buttonVariants } from './ui/button'
 import Image from 'next/image'
 
+
+
+
 const NavBar = () => {
     return (
         <nav className="sticky h-14 inset-x-0 top-0 z-20 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
@@ -21,6 +24,7 @@ const NavBar = () => {
                                 variant: "ghost",
                                 size: "sm"
                             })}> Pricing</Link>
+                            
                             <Link href='/dashboard' className={buttonVariants({
 
                                 size: "sm"
