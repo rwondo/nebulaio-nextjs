@@ -3,17 +3,13 @@
 import { signIn, signOut } from "next-auth/react";
 import { FunctionComponent } from "react";
 
-const WhopSignIn: FunctionComponent<{
-  loggedIn?: boolean;
-  children: any;
-}> = ({ loggedIn = false, children }) => {
+function WhopSignIn() {
   return (
     <a
       href="#"
       className="bg-blue-400 hover:bg-blue-500/70"
-      onClick={() => (loggedIn ? signOut() : signIn("whop"))}
+      onClick={() => (signIn("whop"))}
     >
-      {children}
     </a>
   );
 };
