@@ -1,22 +1,16 @@
 import { NextAuthOptions, Session } from "next-auth";
-
-
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import { db } from "@/lib/db";
 import { WhopProvider } from "./whop-provider";
 
 export const authConfig: NextAuthOptions = {
+  adapter: DrizzleAdapter(db),
   providers: [
     WhopProvider({
-      clientId: process.env.WHOP_ID!,
-      clientSecret: process.env.WHOP_SECRET!,
+      clientId: process.env.NEXT_PUBLIC_WHOP_CLIENT_ID!,
+      clientSecret: process.env.WHOP_CLIENT_SECRET!,
     }),
   ],
-  pages: {
-    signIn: "/login",
-    signOut: '/auth/signout',
-    error: '/auth/error', // Error code passed in query string as ?error=
-    verifyRequest: '/auth/verify-request', // (used for check email message)
-    newUser: '/auth/new-user' // New users will be directed here on first sign in (leave the property out if not of interest)
-  },
   callbacks: {
     session({ session, user }) {
       session.user.id = user.id as string;
@@ -24,7 +18,6 @@ export const authConfig: NextAuthOptions = {
     },
   },
   session: {
-    strategy: "jwt",
+    strategy: "database",
   },
-  secret: process.env.NEXTAUTH_SECRET
 };
