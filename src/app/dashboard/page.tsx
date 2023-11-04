@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
+import { profile } from "console";
 
 export default async function ProtectedRoute() {
     const session = await getServerSession();
@@ -7,6 +8,6 @@ export default async function ProtectedRoute() {
         redirect("/login")
     }
     return (
-        <div> logged in</div>
+        <div> logged in </div>
     )
 }
