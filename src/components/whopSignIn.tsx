@@ -1,17 +1,24 @@
 "use client";
 
-import { signIn, signOut } from "next-auth/react";
-import { FunctionComponent } from "react";
+import { signIn } from "next-auth/react";
+
+
+import { Button } from "./ui/button";
+import Router from "next/router";
+
+
 
 function WhopSignIn() {
   return (
-    <a
-      href="#"
-      className="bg-blue-400 hover:bg-blue-500/70"
-      onClick={() => (signIn("whop"))}
+    <a  href={``}>
+    <Button
+      onClick={async () => signIn("whop")}
+      className="bg-blue-500 hover:bg-blue-500/80"
     >
+      Sign in with Whop 
+    </Button>
     </a>
   );
-};
+}
 
 export default WhopSignIn;
